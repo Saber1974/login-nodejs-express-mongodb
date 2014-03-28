@@ -1,0 +1,40 @@
+extend layout
+
+block container
+
+  .widget
+    h1 SignUp
+    form(name="sign_up", method="post")
+      table
+        tr
+            td 
+               label(class="email_label") Username:
+            td(class="input_td")
+               input(type="text", name="username", value="#{username}", class="login_input")
+            td
+              p(class="error") #{username_error}
+        tr
+            td 
+               label(class="email_label") Password:
+            td(class="input_td")
+               input(type="password", name="password", value="#{password}", class="login_input")
+            td
+              p(class="error") #{password_error}
+        tr
+            td 
+               label(class="email_label") Verify Password:
+            td(class="input_td")
+               input(type="password", name="verify", value="", class="login_input")
+            td
+              p(class="error") #{verify_error}
+        tr
+            td 
+               label(class="email_label") Your E-mail:
+            td(class="input_td")
+               input(type="email", name="email", value="#{email}", class="login_input")
+            td
+              p(class="error") #{email_error}
+      br
+      input(type="submit", value="Sign Up", class="submit_button")
+      br
+

@@ -1,0 +1,64 @@
+
+extend layout
+
+
+
+
+
+block container
+
+  .widget
+
+    h1 Login
+    form(name="login", action="/login", method="post")
+      table
+        tr
+            td 
+               label(class="email_label") E-mail:
+            td(class="input_td")
+               input(type="text", name="user", class="login_input")
+        tr
+            td 
+               label(class="password_label") Password:
+            td(class="input_td")
+               input(type="password", name="pass", class="login_input")
+
+      input(type="submit", value="login", class="submit_button")
+  br
+
+  .widget
+    h1 Sign Up
+    form(name="sign_up", action="/login", method="post")
+      table
+        tr
+            td 
+               label(class="email_label") First Name:
+            td(class="input_td")
+               input(type="text", name="user", class="login_input")
+        tr
+            td 
+               label(class="email_label") Last Name:
+            td(class="input_td")
+               input(type="text", name="user", class="login_input")
+
+        tr
+            td 
+               label(class="email_label") Your E-mail:
+            td(class="input_td")
+               input(type="text", name="user", class="login_input")
+        tr
+            td 
+               label(class="email_label") Re-enter E-mail:
+            td(class="input_td")
+               input(type="text", name="user", class="login_input")
+        tr
+            td 
+               label(class="email_label") Gender:
+            td(class="input_td")
+                select(name="gender")
+                   option Male
+                   option Female
+                   option Other
+
+
+      input(type="submit", value="Sign Up", class="submit_button")

@@ -1,0 +1,25 @@
+extend layout
+
+
+block container
+
+  .widget
+
+    h1 Login
+    form(name="login", method="post")
+      table
+        tr
+            td 
+               label(class="email_label") User name:
+            td(class="input_td")
+               input(type="text", name="username", value="#{username}", class="login_input")
+        tr
+            td 
+               label(class="password_label") Password:
+            td(class="input_td")
+               input(type="password", name="password", value="", class="login_input")
+
+      input(type="submit", value="login", class="submit_button")
+    br
+    p #{login_error}
+    br
